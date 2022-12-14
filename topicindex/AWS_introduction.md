@@ -161,6 +161,11 @@
 >## AWS Glue
 # Security, Identity, & Compliance
 >## IAM
+>### user
+>- user can have usergroup along with policies.
+>- user groups have policies 
+>- Policies are attached to users or usergroups
+>- roles are attached to resources 
 >## Resource Access Manager
 >## Cognito
 >## Secrets Manager
