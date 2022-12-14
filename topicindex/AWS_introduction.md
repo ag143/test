@@ -1,5 +1,9 @@
 # Compute
 >## EC2
+>- OS type
+>- Keypair
+>- Network settings(vpc and subnect)
+>- Storage colume
 >## Lightsail
 >## Lambda
 >## Batch
@@ -16,6 +20,8 @@
 >## Red Hat OpenShift Service on AWS
 # Storage
 >## S3
+>- buckets
+>- Access Points
 >## EFS
 >## FSx
 >## S3 Glacier
