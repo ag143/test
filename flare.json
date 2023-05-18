@@ -1,380 +1,596 @@
-{
- "name": "flare",
- "children": [
-  {
-   "name": "analytics",
-   "children": [
-    {
-     "name": "cluster",
-     "children": [
-      {"name": "AgglomerativeCluster", "size": 3938},
-      {"name": "CommunityStructure", "size": 3812},
-      {"name": "HierarchicalCluster", "size": 6714},
-      {"name": "MergeEdge", "size": 743}
-     ]
-    },
-    {
-     "name": "graph",
-     "children": [
-      {"name": "BetweennessCentrality", "size": 3534},
-      {"name": "LinkDistance", "size": 5731},
-      {"name": "MaxFlowMinCut", "size": 7840},
-      {"name": "ShortestPaths", "size": 5914},
-      {"name": "SpanningTree", "size": 3416}
-     ]
-    },
-    {
-     "name": "optimization",
-     "children": [
-      {"name": "AspectRatioBanker", "size": 7074}
-     ]
-    }
-   ]
-  },
-  {
-   "name": "animate",
-   "children": [
-    {"name": "Easing", "size": 17010},
-    {"name": "FunctionSequence", "size": 5842},
-    {
-     "name": "interpolate",
-     "children": [
-      {"name": "ArrayInterpolator", "size": 1983},
-      {"name": "ColorInterpolator", "size": 2047},
-      {"name": "DateInterpolator", "size": 1375},
-      {"name": "Interpolator", "size": 8746},
-      {"name": "MatrixInterpolator", "size": 2202},
-      {"name": "NumberInterpolator", "size": 1382},
-      {"name": "ObjectInterpolator", "size": 1629},
-      {"name": "PointInterpolator", "size": 1675},
-      {"name": "RectangleInterpolator", "size": 2042}
-     ]
-    },
-    {"name": "ISchedulable", "size": 1041},
-    {"name": "Parallel", "size": 5176},
-    {"name": "Pause", "size": 449},
-    {"name": "Scheduler", "size": 5593},
-    {"name": "Sequence", "size": 5534},
-    {"name": "Transition", "size": 9201},
-    {"name": "Transitioner", "size": 19975},
-    {"name": "TransitionEvent", "size": 1116},
-    {"name": "Tween", "size": 6006}
-   ]
-  },
-  {
-   "name": "data",
-   "children": [
-    {
-     "name": "converters",
-     "children": [
-      {"name": "Converters", "size": 721},
-      {"name": "DelimitedTextConverter", "size": 4294},
-      {"name": "GraphMLConverter", "size": 9800},
-      {"name": "IDataConverter", "size": 1314},
-      {"name": "JSONConverter", "size": 2220}
-     ]
-    },
-    {"name": "DataField", "size": 1759},
-    {"name": "DataSchema", "size": 2165},
-    {"name": "DataSet", "size": 586},
-    {"name": "DataSource", "size": 3331},
-    {"name": "DataTable", "size": 772},
-    {"name": "DataUtil", "size": 3322}
-   ]
-  },
-  {
-   "name": "display",
-   "children": [
-    {"name": "DirtySprite", "size": 8833},
-    {"name": "LineSprite", "size": 1732},
-    {"name": "RectSprite", "size": 3623},
-    {"name": "TextSprite", "size": 10066}
-   ]
-  },
-  {
-   "name": "flex",
-   "children": [
-    {"name": "FlareVis", "size": 4116}
-   ]
-  },
-  {
-   "name": "physics",
-   "children": [
-    {"name": "DragForce", "size": 1082},
-    {"name": "GravityForce", "size": 1336},
-    {"name": "IForce", "size": 319},
-    {"name": "NBodyForce", "size": 10498},
-    {"name": "Particle", "size": 2822},
-    {"name": "Simulation", "size": 9983},
-    {"name": "Spring", "size": 2213},
-    {"name": "SpringForce", "size": 1681}
-   ]
-  },
-  {
-   "name": "query",
-   "children": [
-    {"name": "AggregateExpression", "size": 1616},
-    {"name": "And", "size": 1027},
-    {"name": "Arithmetic", "size": 3891},
-    {"name": "Average", "size": 891},
-    {"name": "BinaryExpression", "size": 2893},
-    {"name": "Comparison", "size": 5103},
-    {"name": "CompositeExpression", "size": 3677},
-    {"name": "Count", "size": 781},
-    {"name": "DateUtil", "size": 4141},
-    {"name": "Distinct", "size": 933},
-    {"name": "Expression", "size": 5130},
-    {"name": "ExpressionIterator", "size": 3617},
-    {"name": "Fn", "size": 3240},
-    {"name": "If", "size": 2732},
-    {"name": "IsA", "size": 2039},
-    {"name": "Literal", "size": 1214},
-    {"name": "Match", "size": 3748},
-    {"name": "Maximum", "size": 843},
-    {
-     "name": "methods",
-     "children": [
-      {"name": "add", "size": 593},
-      {"name": "and", "size": 330},
-      {"name": "average", "size": 287},
-      {"name": "count", "size": 277},
-      {"name": "distinct", "size": 292},
-      {"name": "div", "size": 595},
-      {"name": "eq", "size": 594},
-      {"name": "fn", "size": 460},
-      {"name": "gt", "size": 603},
-      {"name": "gte", "size": 625},
-      {"name": "iff", "size": 748},
-      {"name": "isa", "size": 461},
-      {"name": "lt", "size": 597},
-      {"name": "lte", "size": 619},
-      {"name": "max", "size": 283},
-      {"name": "min", "size": 283},
-      {"name": "mod", "size": 591},
-      {"name": "mul", "size": 603},
-      {"name": "neq", "size": 599},
-      {"name": "not", "size": 386},
-      {"name": "or", "size": 323},
-      {"name": "orderby", "size": 307},
-      {"name": "range", "size": 772},
-      {"name": "select", "size": 296},
-      {"name": "stddev", "size": 363},
-      {"name": "sub", "size": 600},
-      {"name": "sum", "size": 280},
-      {"name": "update", "size": 307},
-      {"name": "variance", "size": 335},
-      {"name": "where", "size": 299},
-      {"name": "xor", "size": 354},
-      {"name": "_", "size": 264}
-     ]
-    },
-    {"name": "Minimum", "size": 843},
-    {"name": "Not", "size": 1554},
-    {"name": "Or", "size": 970},
-    {"name": "Query", "size": 13896},
-    {"name": "Range", "size": 1594},
-    {"name": "StringUtil", "size": 4130},
-    {"name": "Sum", "size": 791},
-    {"name": "Variable", "size": 1124},
-    {"name": "Variance", "size": 1876},
-    {"name": "Xor", "size": 1101}
-   ]
-  },
-  {
-   "name": "scale",
-   "children": [
-    {"name": "IScaleMap", "size": 2105},
-    {"name": "LinearScale", "size": 1316},
-    {"name": "LogScale", "size": 3151},
-    {"name": "OrdinalScale", "size": 3770},
-    {"name": "QuantileScale", "size": 2435},
-    {"name": "QuantitativeScale", "size": 4839},
-    {"name": "RootScale", "size": 1756},
-    {"name": "Scale", "size": 4268},
-    {"name": "ScaleType", "size": 1821},
-    {"name": "TimeScale", "size": 5833}
-   ]
-  },
-  {
-   "name": "util",
-   "children": [
-    {"name": "Arrays", "size": 8258},
-    {"name": "Colors", "size": 10001},
-    {"name": "Dates", "size": 8217},
-    {"name": "Displays", "size": 12555},
-    {"name": "Filter", "size": 2324},
-    {"name": "Geometry", "size": 10993},
-    {
-     "name": "heap",
-     "children": [
-      {"name": "FibonacciHeap", "size": 9354},
-      {"name": "HeapNode", "size": 1233}
-     ]
-    },
-    {"name": "IEvaluable", "size": 335},
-    {"name": "IPredicate", "size": 383},
-    {"name": "IValueProxy", "size": 874},
-    {
-     "name": "math",
-     "children": [
-      {"name": "DenseMatrix", "size": 3165},
-      {"name": "IMatrix", "size": 2815},
-      {"name": "SparseMatrix", "size": 3366}
-     ]
-    },
-    {"name": "Maths", "size": 17705},
-    {"name": "Orientation", "size": 1486},
-    {
-     "name": "palette",
-     "children": [
-      {"name": "ColorPalette", "size": 6367},
-      {"name": "Palette", "size": 1229},
-      {"name": "ShapePalette", "size": 2059},
-      {"name": "SizePalette", "size": 2291}
-     ]
-    },
-    {"name": "Property", "size": 5559},
-    {"name": "Shapes", "size": 19118},
-    {"name": "Sort", "size": 6887},
-    {"name": "Stats", "size": 6557},
-    {"name": "Strings", "size": 22026}
-   ]
-  },
-  {
-   "name": "vis",
-   "children": [
-    {
-     "name": "axis",
-     "children": [
-      {"name": "Axes", "size": 1302},
-      {"name": "Axis", "size": 24593},
-      {"name": "AxisGridLine", "size": 652},
-      {"name": "AxisLabel", "size": 636},
-      {"name": "CartesianAxes", "size": 6703}
-     ]
-    },
-    {
-     "name": "controls",
-     "children": [
-      {"name": "AnchorControl", "size": 2138},
-      {"name": "ClickControl", "size": 3824},
-      {"name": "Control", "size": 1353},
-      {"name": "ControlList", "size": 4665},
-      {"name": "DragControl", "size": 2649},
-      {"name": "ExpandControl", "size": 2832},
-      {"name": "HoverControl", "size": 4896},
-      {"name": "IControl", "size": 763},
-      {"name": "PanZoomControl", "size": 5222},
-      {"name": "SelectionControl", "size": 7862},
-      {"name": "TooltipControl", "size": 8435}
-     ]
-    },
-    {
-     "name": "data",
-     "children": [
-      {"name": "Data", "size": 20544},
-      {"name": "DataList", "size": 19788},
-      {"name": "DataSprite", "size": 10349},
-      {"name": "EdgeSprite", "size": 3301},
-      {"name": "NodeSprite", "size": 19382},
-      {
-       "name": "render",
-       "children": [
-        {"name": "ArrowType", "size": 698},
-        {"name": "EdgeRenderer", "size": 5569},
-        {"name": "IRenderer", "size": 353},
-        {"name": "ShapeRenderer", "size": 2247}
-       ]
-      },
-      {"name": "ScaleBinding", "size": 11275},
-      {"name": "Tree", "size": 7147},
-      {"name": "TreeBuilder", "size": 9930}
-     ]
-    },
-    {
-     "name": "events",
-     "children": [
-      {"name": "DataEvent", "size": 2313},
-      {"name": "SelectionEvent", "size": 1880},
-      {"name": "TooltipEvent", "size": 1701},
-      {"name": "VisualizationEvent", "size": 1117}
-     ]
-    },
-    {
-     "name": "legend",
-     "children": [
-      {"name": "Legend", "size": 20859},
-      {"name": "LegendItem", "size": 4614},
-      {"name": "LegendRange", "size": 10530}
-     ]
-    },
-    {
-     "name": "operator",
-     "children": [
-      {
-       "name": "distortion",
-       "children": [
-        {"name": "BifocalDistortion", "size": 4461},
-        {"name": "Distortion", "size": 6314},
-        {"name": "FisheyeDistortion", "size": 3444}
-       ]
-      },
-      {
-       "name": "encoder",
-       "children": [
-        {"name": "ColorEncoder", "size": 3179},
-        {"name": "Encoder", "size": 4060},
-        {"name": "PropertyEncoder", "size": 4138},
-        {"name": "ShapeEncoder", "size": 1690},
-        {"name": "SizeEncoder", "size": 1830}
-       ]
-      },
-      {
-       "name": "filter",
-       "children": [
-        {"name": "FisheyeTreeFilter", "size": 5219},
-        {"name": "GraphDistanceFilter", "size": 3165},
-        {"name": "VisibilityFilter", "size": 3509}
-       ]
-      },
-      {"name": "IOperator", "size": 1286},
-      {
-       "name": "label",
-       "children": [
-        {"name": "Labeler", "size": 9956},
-        {"name": "RadialLabeler", "size": 3899},
-        {"name": "StackedAreaLabeler", "size": 3202}
-       ]
-      },
-      {
-       "name": "layout",
-       "children": [
-        {"name": "AxisLayout", "size": 6725},
-        {"name": "BundledEdgeRouter", "size": 3727},
-        {"name": "CircleLayout", "size": 9317},
-        {"name": "CirclePackingLayout", "size": 12003},
-        {"name": "DendrogramLayout", "size": 4853},
-        {"name": "ForceDirectedLayout", "size": 8411},
-        {"name": "IcicleTreeLayout", "size": 4864},
-        {"name": "IndentedTreeLayout", "size": 3174},
-        {"name": "Layout", "size": 7881},
-        {"name": "NodeLinkTreeLayout", "size": 12870},
-        {"name": "PieLayout", "size": 2728},
-        {"name": "RadialTreeLayout", "size": 12348},
-        {"name": "RandomLayout", "size": 870},
-        {"name": "StackedAreaLayout", "size": 9121},
-        {"name": "TreeMapLayout", "size": 9191}
-       ]
-      },
-      {"name": "Operator", "size": 2490},
-      {"name": "OperatorList", "size": 5248},
-      {"name": "OperatorSequence", "size": 4190},
-      {"name": "OperatorSwitch", "size": 2581},
-      {"name": "SortOperator", "size": 2023}
-     ]
-    },
-    {"name": "Visualization", "size": 16540}
-   ]
-  }
- ]
+{"name":"Insurance Capability Map v4",
+  "children": [
+		{"name": "1.0 Develop & Manage Products/Service",
+			"children": [
+				{"name":"1.1 Define New Offerings Concepts and Plans",
+					"children": [
+						{"name" : "1.1.1 Generate Ideas & Concepts"
+						},
+						{"name" : "1.1.2 Complete Market and Customer Research"},
+						{"name" : "1.1.3 Develop Actuarial Assumptions"},
+						{"name" : "1.1.4 Examine Legal Implications"},
+						{"name" : "1.1.5 Determine Investment Options"},
+						{"name" : "1.1.6 Test Product Compliance"},
+						{"name" : "1.1.7 Establish Underwriting Standards"},
+						{"name" : "1.1.8 Define Service Strategies"},
+						{"name" : "1.1.9 Establish Reinsurance Requirements"},
+						{"name" : "1.1.10 Forecast Sales Volumes"},
+						{"name" : "1.1.11 Identify Distribution Channels"},
+						{"name" : "1.1.12 Establish Partner Options"},
+						{"name" : "1.1.13 Prototype Offering"},
+						{"name" : "1.1.14 Establish Internal Communications Campaign"}
+						
+					]
+				},
+				{"name":"1.2 Develop Product & Service",
+					"children": [
+						{"name" : "1.2.1 Publish Development/Deployment Plan"},
+						{"name" : "1.2.2 Capture Requirements"},
+						{"name" : "1.2.3 Develop Pricing & Rate Book"},
+						{"name" : "1.2.4 Develop Sales Tools"},
+						{"name" : "1.2.5 Establish New Business & Underwriting Guidelines"},
+						{"name" : "1.2.6 Develop Product Agreement & Documentation"},
+						{"name" : "1.2.7 Conduct Product Testing",
+							"children" : [
+								{"name" : "1.2.7.1 Conduct Target Market Testing"},
+								{"name" : "1.2.7.2 Adjust & Modify Product"}
+							]
+						},
+						{"name" : "1.2.8 Establish Technology Requirements"},
+						{"name" : "1.2.9 Identify/Implement Process Improvements"},
+						{"name" : "1.2.10 Obtain Regulatory Approvals"},
+						{"name" : "1.2.11 Develop Training Plan"},
+						{"name" : "1.2.12 Develop Loss Control Services"},
+						{"name" : "1.2.13 Produce Product/Service Information",
+							"children": [
+								{"name" : "1.2.13.1 Develop Marketing Collateral"},
+								{"name" : "1.2.13.2 Develop Compensation Plan"}
+							]	
+						}
+					]
+				},
+				{"name":"1.3 Launch Offering",
+					"children": [
+						{"name" : "1.3.1 Plan for Offering Introduction"},
+						{"name" : "1.3.2 Establish Partner Role(s) "},
+						{"name" : "1.3.3 Develop Processes & Tools "},
+						{"name" : "1.3.4 Develop Support Material"},
+						{"name" : "1.3.5 Modify Systems & Processes"},
+						{"name" : "1.3.6 Implement Communication Strategy"},
+						{"name" : "1.3.7 Implement Training"},
+						{"name" : "1.3.8 Identify Improvement Opportunities "},
+						{"name" : "1.3.9 Product Launch"}
+					]
+				},
+				{"name":"1.4 Manage Products/Services Lifecycle",
+					"children": [
+						{"name" : "1.4.1 Analyze Portfolio",
+							"children": [
+								{"name" : "1.4.1.1 Collect & Analyze Segment Data"},
+								{"name" : "1.4.1.2 SWOT Current Offerings"},
+								{"name" : "1.4.1.3 Take Corrective Action"}
+							]
+						},
+						{"name" : "1.4.2 Refine Offerings Price",
+							"children": [
+								{"name" : "1.4.2.1 Evaluate Pricing"},
+								{"name" : "1.4.2.2 Modify Offering Configuration & Rules"}
+							]
+						},
+						{"name" : "1.4.3 Modify Products"},
+						{"name" : "1.4.4 Update Offering Documentation"}
+					]
+				},
+				{"name":"1.5 Sunset/Retire Product/Service",
+					"children": [
+						{"name" : "1.5.1 Determine Sunset Strategy"},
+						{"name" : "1.5.2 Identify Processes & Timing ",
+							"children": [
+								{"name" : "1.5.2.1 Develop list of Offering/services to withdraw "},
+								{"name" : "1.5.2.2 Determine Sunset Schedule"},
+								{"name" : "1.5.2.3 Develop Service Model"}
+							]
+						},
+						{"name" : "1.5.3 Identify Impacts"},
+						{"name" : "1.5.4 Implement Withdrawal",
+							"children": [
+								{"name" : "1.5.4.1 Communicate Plan "},
+								{"name" : "1.5.4.2 Sunset Offering Production and Sale "},
+								{"name" : "1.5.4.3 Implement Product Servicing Plan"}
+							]
+						}
+					]
+				}
+			]
+		},
+		{"name": "2.0 Generate Demand",
+			"children": [
+				{"name":"2.1 Marketing",
+					"children" :[
+						{"name" : "2.1.1 Market Research & Analysis",
+							"children": [
+								{"name" : "2.1.1.1 Perform Competitive Research & Analysis"},
+								{"name" : "2.1.1.2 Perform Competitive Pricing"},
+								{"name" : "2.1.1.3 Perform Market Sizing"},
+								{"name" : "2.1.1.4 Perform Risk & Trends Analysis"},
+								{"name" : "2.1.1.5 Perform Customer/Market Segmentation"},
+								{"name" : "2.1.1.6 Conduct Buying Analysis"},
+								{"name" : "2.1.1.7 Perform Pricing Analysis"}
+							]
+						},
+						{"name" : "2.1.2 Market Planning",
+							"children": [
+								{"name" : "2.1.2.1 Target Market Identification",
+									"children" :[
+										{"name" : "2.1.2.1.1 Determine Market Maturity"},
+										{"name" : "2.1.2.1.2 Identify Market Segmentation"},
+										{"name" : "2.1.2.1.3 Determine Positioning"}
+									]
+								},
+								{"name" : "2.1.2.2 Market Program Strategy",
+									"children" :[
+										{"name" : "2.1.2.2.1 Define Marketing Plan"},
+										{"name" : "2.1.2.2.2 Develop Market Messaging"},
+										{"name" : "2.1.2.2.3 Define Channel Strategy"},
+										{"name" : "2.1.2.2.4 Develop Marketing Material"},
+										{"name" : "2.1.2.2.5 Prepare Sales Forecast"},
+										{"name" : "2.1.2.2.6 Develop Marketing Budgets"}
+									]
+								},
+								{"name" : "2.1.2.3 Analyze Market Lifecycle"}
+							]
+						},
+						{"name" : "2.1.3 Market Program Management",
+							"children": [
+								{"name" : "2.1.3.1 Manage Promotions",
+									"children" :[
+										{"name" : "2.1.3.1.1 Execute Marketing Promotion"},
+										{"name" : "2.1.3.1.2 Analyze Promotion Effectiveness"}
+									]
+								},
+								{"name" : "2.1.3.2 Execute and Manage Campaigns",
+									"children" :[
+										{"name" : "2.1.3.2.1 Execute Marketing Campaign Plan"},
+										{"name" : "2.1.3.2.2 Analyze Campaign Effectiveness"}
+									]
+								}
+							]
+						}
+					]},
+				{"name":"2.2 Sales - Customer Acquisition and Retention",
+					"children" :[
+						{"name" : "2.2.1 Generate & Qualify Leads"},
+						{"name" : "2.2.2 Initiate New Business or Renewal Process",
+							"children": [
+								{"name" : "2.2.2.1 Perform Needs Analysis"},
+								{"name" : "2.2.2.2 Produce Quotation(s)"},
+								{"name" : "2.2.2.3 Complete Application"}
+							]
+						},
+						{"name" : "2.2.3 Manage the Sales Process",
+							"children": [
+								{"name" : "2.2.3.1 Manage Pending Cases"},
+								{"name" : "2.2.3.2 Track Commissions and Incentives"}
+							]
+						},
+						{"name" : "2.2.4 Manage Inforce Block",
+							"children": [
+								{"name" : "2.2.4.1 Update Client Information"},
+								{"name" : "2.2.4.2 Provide Service"},
+								{"name" : "2.2.4.3 Cross Sell"}
+							]
+						}
+					]
+				},
+				{"name":"2.3 Manage Distribution Channels",
+					"children" :[
+						{"name" : "2.3.1 Producer Relationship Management",
+							"children": [
+								{"name" : "2.3.1.1 Prospect & Establish New Producers"},
+								{"name" : "2.3.1.2 Administer Compensation Agreemente",
+									"children": [
+										{"name" : "2.3.1.2.1 Administer Contract"},
+										{"name" : "2.3.1.2.2 Administer Product Licenses"},
+										{"name" : "2.3.1.2.3 Administer Appointments"}
+									]
+								},
+								{"name" : "2.3.1.3 Manage Channel Hierarchy"}
+							]
+						},
+						{"name" : "2.3.2 Incentive Compensation Management",
+							"children": [
+								{"name" : "2.3.2.1 Configure & Model Comp Plan"},
+								{"name" : "2.3.2.2 Forecast Payments"},
+								{"name" : "2.3.2.3 Adjust & Calculate Payments"},
+								{"name" : "2.3.2.4 Report & Monitor Payments"}
+							]
+						},
+						{"name" : "2.3.3 Monitor Performance",
+							"children": [
+								{"name" : "2.3.3.1 Manage Producer Licensing"},
+								{"name" : "2.3.3.2 Manage Producer Comp & Recognition"},
+								{"name" : "2.3.3.3 Manage Territories"},
+								{"name" : "2.3.3.4 Manage Segmentation"}
+							]
+						},
+						{"name" : "2.3.4 Provide Channel Support",
+							"children": [
+								{"name" : "2.3.4.1 Licensing"},
+								{"name" : "2.3.4.2 Compensation"},
+								{"name" : "2.3.4.3 Technology"},
+								{"name" : "2.3.4.4 Product Information"},
+								{"name" : "2.3.4.5 Forms and Collateral"},
+								{"name" : "2.3.4.6 Advanced Underwriting"},
+								{"name" : "2.3.4.7 Pending Case Status"},
+								{"name" : "2.3.4.8 Compliance & Regulations"}
+							]
+						},
+						{"name" : "2.3.5 Provide Training & Education",
+							"children": [
+								{"name" : "2.3.5.1 Build and Deliver Product Training"},
+								{"name" : "2.3.5.2 Advise & Coordinate Continuing Education"}
+							]
+						}
+					]
+				},
+				{"name":"2.4 Customer Relationship Management",
+					"children" :[
+						{"name" : "2.4.1 Develop and Maintain Party Information"},
+						{"name" : "2.4.2 Capture Customer Needs"},
+						{"name" : "2.4.3 Maintain Customer Information"},
+						{"name" : "2.4.4 Administer Lead Processing"},
+						{"name" : "2.4.5 Plan Customer Management"}
+					]
+				}
+					
+			]
+		},
+		{"name": "3.0 Policy Administration",
+			"children": [
+				{"name" : "3.1 Process New Business or Renewals",
+					"children" :[
+						{"name" : "3.1.1 Reconcile Risk Information"},
+						{"name" : "3.1.2 Performance Compliance Review"},
+						{"name" : "3.1.3 Reconcile Underwriting Requirements"},
+						{"name" : "3.1.4 Organize Relevant Documents",
+							"children": [
+								{"name" : "3.1.4.1 Reconcile Underwriting Requirements"},
+								{"name" : "3.1.4.2 Organize Forms and Documents"},
+								{"name" : "3.1.4.3 Organize Relevant Correspondence"}
+							]
+						}
+					]
+				},
+				{"name" : "3.2 Underwriting Services",
+					"children" :[
+						{"name" : "3.2.1 Establish Underwriting Guidelines",
+							"children": [
+								{"name" : "3.2.1.1 Set Business Goals"},
+								{"name" : "3.2.1.2 Set Pricing Assumptions"},
+								{"name" : "3.2.1.3 Publish Underwriting Standards"},
+								{"name" : "3.2.1.4 Arrange for Reinsurance"}
+							]
+						},
+						{"name" : "3.2.2 Assessing Risk",
+							"children": [
+								{"name" : "3.2.2.1 Review Field Underwriting",
+									"children": [
+										{"name" : "3.2.2.1.1 Review for Completeness"},
+										{"name" : "3.2.2.1.2 Review for Correctness"}
+									]
+								},
+								{"name" : "3.2.2.2 Detect Antiselection"},
+								{"name" : "3.2.2.3 Detect Insurable Interest"},
+								{"name" : "3.2.2.4 Determine Financial Risk"},
+								{"name" : "3.2.2.5 Verify Agent Licensing"},
+								{"name" : "3.2.2.6 Verify State Compliance"},
+								{"name" : "3.2.2.7 Review Inforce Coverages"},
+								{"name" : "3.2.2.8 Review Claims History"},
+								{"name" : "3.2.2.9 Consider Capacity Limits"},
+								{"name" : "3.2.2.10 Gather Other Requirements"}
+							]
+						},
+						{"name" : "3.2.3 Decline Coverage(s)"},
+						{"name" : "3.2.4 Approve Coverage(s)",
+							"children": [
+								{"name" : "3.2.4.1 Factor Reinsurance"},
+								{"name" : "3.2.4.2 Establish Premium"},
+								{"name" : "3.2.4.3 Determine T&Cs"},
+								{"name" : "3.2.4.4 Document Decision"},
+								{"name" : "3.2.4.5 Communicate Decision"},
+								{"name" : "3.2.4.6 Maintain Privacy & Confidentiality"},
+								{"name" : "3.2.4.7 Bind Coverage",
+									"children": [
+										{"name" : "3.2.4.7.1 Accept Binding Premium"},
+										{"name" : "3.2.4.7.2 Provide Binder"}
+									]
+								}
+							]
+						},
+						{"name" : "3.2.5 Issue Policy/Contract ",
+							"children": [
+								{"name" : "3.2.5.1 Verify Initial Premium"},
+								{"name" : "3.2.5.2 Verify Requirements"},
+								{"name" : "3.2.5.3 Produce Policy Document(s)"},
+								{"name" : "3.2.5.4 Determine Delivery Option"},
+								{"name" : "3.2.5.5 Update Inforce Record(s)"}
+							]
+						},
+						{"name" : "3.2.6 Monitor Underwriting Decisions",
+							"children": [
+								{"name" : "3.2.6.1 Monitor Loss Experience"},
+								{"name" : "3.2.6.2 Determine Book P&L"}
+							]
+						}
+					]
+				},
+				{"name" : "3.3 Policy/Contract Administration",
+					"children": [
+						{"name" : "3.3.1 Administer Policy Changes",
+							"children": [
+								{"name" : "3.3.1.1 Manage Scheduled Changes"},
+								{"name" : "3.3.1.2 Manage Unscheduled Changes"},
+								{"name" : "3.3.1.3 Manage Investments"},
+								{"name" : "3.3.1.4 Manage Disbursements",
+									"children": [
+										{"name" : "3.3.1.4.1 Administer Dividends"},
+										{"name" : "3.3.1.4.2 Administer Loans"}
+									]
+								}
+							]
+						},
+						{"name" : "3.3.2 Manage Customer Inquiries"},
+						{"name" : "3.3.3 Administer Billing and Receivables",
+							"children": [
+								{"name" : "3.3.3.1 Manage Premium Billing"},
+								{"name" : "3.3.3.2 Manage Accounts Receivables",
+									"children": [
+										{"name" : "3.3.3.2.1 Produce Billing Statements"},
+										{"name" : "3.3.3.2.2 Manage Unsolicited Payments"},
+										{"name" : "3.3.3.2.3 Apply Remittance/Deposits"},
+										{"name" : "3.3.3.2.4 Manage Collections"}
+									]
+								}
+							]
+						},
+						{"name" : "3.3.4 Administer Producer Compensation"},
+						{"name" : "3.3.5 Evaluate Inforce Block"}
+					]
+				}
+			]
+		},
+		{"name": "4.0 Claims Administration",
+			"children": [
+				{"name":"4.1 Record First Notice of Loss",
+					"children" :[
+						{"name" : "4.1.1 Capture Claim & Claimant Information",
+							"children":[
+								{"name":"Record Auto Claim", "type":"function"},
+								{"name":"Record Home Claim", "type":"function"}
+							]
+						},
+						{"name" : "4.1.2 Validate Coverages"},
+						{"name" : "4.1.3 Determine Initial Liability"},
+						{"name" : "4.1.4 Initiate Fraud/Abuse Detection"},
+						{"name" : "4.1.5 Notify Preferred Providers"},
+						{"name" : "4.1.6 Determine CAT Categorization"}
+					]
+				},
+				{"name":"4.2 Manage the Claim",
+					"children" :[
+						{"name" : "4.2.1 Assign to Claims Representative"},
+						{"name" : "4.2.2 Record Claim"},
+						{"name" : "4.2.3 Contact Relevant Parties"},
+						{"name" : "4.2.4 Investigate Claim"},
+						{"name" : "4.2.5 Document Claim"},
+						{"name" : "4.2.6 Create Initial Reserve"},
+						{"name" : "4.2.7 Manage Case",
+							"children": [
+								{"name" : "4.2.7.1 Establish Medical Case"},
+								{"name" : "4.2.7.2 Review Medical Claims Charges"},
+								{"name" : "4.2.7.3 Appraise Damage"},
+								{"name" : "4.2.7.4 Review Restoration Charges"},
+								{"name" : "4.2.7.5 Adjust Reserves"}
+							]
+						},
+						{"name" : "4.2.8 Investigate Fraud/Abuse",
+							"children": [
+								{"name" : "4.2.8.1 Gather & Analyze Case Data"},
+								{"name" : "4.2.8.2 Investigate Relevant Parties"},
+								{"name" : "4.2.8.3 Prosecute or Legitimize"}
+							]
+						},
+						{"name" : "4.2.9 Determine Payment "},
+						{"name" : "4.2.10 Determine Co-insurance"},
+						{"name" : "4.2.11 Settle Claim",
+							"children": [
+								{"name" : "4.2.11.1 Process Denials"},
+								{"name" : "4.2.11.2 Manage Payments"},
+								{"name" : "4.2.11.3 Reimburse 3rd Parties"},
+								{"name" : "4.2.11.4 Update Claims Information"}
+							]
+						}
+					]
+				},
+				{"name":"4.3 Manage Recoveries",
+					"children" :[
+						{"name" : "4.3.1 Manage Subrogation/Salvage"},
+						{"name" : "4.3.2 Manage Litigation"},
+						{"name" : "4.3.3 Manage Arbitration"},
+						{"name" : "4.3.4 Update Case & Claims Information"},
+						{"name" : "4.3.5 Initiate Reinsurance"}
+					]
+				},
+				{"name":"4.4 Maintain Regulatory Compliance",
+					"children" :[
+						{"name" : "4.4.1 Identify Relevant Regulation"},
+						{"name" : "4.4.2 File Required Forms"}
+					]
+				},
+				{"name":"4.5 Claims Administration",
+					"children" :[
+						{"name" : "4.5.1 Review Service and Claims Status"},
+						{"name" : "4.5.2 Manage Loss Reporting"},
+						{"name" : "4.5.3 Manage Regulatory Compliance"},
+						{"name" : "4.5.4 Monitor Claims Processing"},
+						{"name" : "4.5.5 Perform Catastrophe Planning"},
+						{"name" : "4.5.6 Manage Service Providers"},
+						{"name" : "4.5.7 Conduct Claims Review & Audit"},
+						{"name" : "4.5.8 Conduct Leakage Reviews"},
+						{"name" : "4.5.9 Forecast Claims Activity"},
+						{"name" : "4.5.10 Evaluate Reserves"},
+						{"name" : "4.5.11 Review Claims Experience "},
+						{"name" : "4.5.12 Manage Bureau and Statistical Reporting"}
+					]
+				}
+			]
+		},
+		{"name": "5.0 Plan & Manage the Business",
+			"children": [
+				{"name":"5.1 Investment Management",
+					"children" :[
+						{"name" : "5.1.1 Equity Management "},
+						{"name" : "5.1.2 Fixed Income"},
+						{"name" : "5.1.3 Portfolio Management"},
+						{"name" : "5.1.4 Real Estate"},
+						{"name" : "5.1.5 Risk Management"}
+					]
+				},
+				{"name":"5.2 Finance Management",
+					"children" :[
+						{"name" : "5.2.1 Accounting"},
+						{"name" : "5.2.2 Budgeting"},
+						{"name" : "5.2.3 General Ledger"},
+						{"name" : "5.2.4 Asset/Liability Management"},
+						{"name" : "5.2.5 Reporting",
+							"children": [
+								{"name" : "5.2.5.1 Generate Financials"},
+								{"name" : "5.2.5.2 Create Regulatory/Statutory Reports"},
+								{"name" : "5.2.5.3 Perform Reinsurance Accounting"},
+								{"name" : "5.2.5.4 Calculate & Manage Reserves"}
+							]
+						},
+						{"name" : "5.2.6 Treasury & Cash Management"},
+						{"name" : "5.2.7 Tax Management "},
+						{"name" : "5.2.8 Acquisition, Mergers, Divestitures"},
+						{"name" : "5.2.9 Risk Management"}
+					]
+				},
+				{"name":"5.3 Human Resources",
+					"children" :[
+						{"name" : "5.3.1 Staffing & Employee Relations "},
+						{"name" : "5.3.2 Compensation & Benefits"},
+						{"name" : "5.3.3 Development & Training"}
+					]
+				},
+				{"name":"5.4 Facilities Management",
+					"children" :[
+						{"name" : "5.4.1 Real Estate"},
+						{"name" : "5.4.2 Security"}
+					]
+				},
+				{"name":"5.5 Internal Audit",
+					"children" :[
+						{"name" : "5.5.1 Line of Business"},
+						{"name" : "5.5.2 Corporate Functions"},
+						{"name" : "5.5.3 IT Audit"}
+					]
+				},
+				{"name":"5.6 Legal & Compliance Management",
+					"children" :[
+						{"name" : "5.6.1 Legal Counsel"},
+						{"name" : "5.6.2 Compliance"},
+						{"name" : "5.6.3 Government & Industry Relations"}
+					]
+				},
+				{"name":"5.7 Information Technology",
+					"children" :[
+						{"name" : "5.7.1 Application Development"},
+						{"name" : "5.7.2 Manage & Deliver IT Services",
+							"children": [
+								{"name" : "5.7.2.1 Change Management",
+									"children": [
+										{"name" : "5.7.2.1.1 Change Management"},
+										{"name" : "5.7.2.1.2 Configuration Management "},
+										{"name" : "5.7.2.1.3 Release Management"}
+									]
+								},
+								{"name" : "5.7.2.2 Operations Management ",
+									"children": [
+										{"name" : "5.7.2.2.1 System Administration"},
+										{"name" : "5.7.2.2.2 Security Administration"},
+										{"name" : "5.7.2.2.3 Service Monitoring and Control"},
+										{"name" : "5.7.2.2.4 Directory Services Administration"},
+										{"name" : "5.7.2.2.5 Network Administration "},
+										{"name" : "5.7.2.2.6 Storage Management"},
+										{"name" : "5.7.2.2.7 Job Scheduling "}
+									]
+								},
+								{"name" : "5.7.2.3 Support Management",
+									"children": [
+										{"name" : "5.7.2.3.1 Service Desk"},
+										{"name" : "5.7.2.3.2 Incident Management"},
+										{"name" : "5.7.2.3.3 Problem Management"}
+									]
+								},
+								{"name" : "5.7.2.4 Optimization Management",
+									"children": [
+										{"name" : "5.7.2.4.1 Service Level Management "},
+										{"name" : "5.7.2.4.2 Financial Management "},
+										{"name" : "5.7.2.4.3 Availability Management "},
+										{"name" : "5.7.2.4.4 Capacity Management"},
+										{"name" : "5.7.2.4.5 IT Service Continuity Management"},
+										{"name" : "5.7.2.4.6 Workforce Management"},
+										{"name" : "5.7.2.4.7 Infrastructure Engineering"},
+										{"name" : "5.7.2.4.8 Security Management"}
+									]
+								}
+							]
+						},
+						{"name" : "5.7.3 Architecture"},
+						{"name" : "5.7.4 Process Reengineering"}
+					]
+				},
+				{"name":"5.8 Procurement",
+					"children" :[
+						{"name" : "5.8.1 Partner Management"},
+						{"name" : "5.8.2 Purchasing"}
+					]
+				},
+				{"name":"5.9 Public Relations",
+					"children" :[
+						{"name" : "5.9.1 Corporate Advertising"},
+						{"name" : "5.9.2 Corporate Communications"},
+						{"name" : "5.9.3 Contributions"},
+						{"name" : "5.9.4 Investor Relations"},
+						{"name" : "5.9.5 Brand Management"},
+						{"name" : "5.9.6 Social Responsibility"}
+					]
+				},
+				{"name":"5.10 Strategic Collaboration"},
+				{"name":"5.11 Develop Partnering Strategy",
+					"children" :[
+						{"name" : "5.11.1 Distribution Channel Strategy"},
+						{"name" : "5.11.2 Plan Product/Service Concepts"},
+						{"name" : "5.11.3 Branding and Positioning"}
+					]
+				},
+				{"name":"5.12 Planning Collaboration",
+					"children" :[
+						{"name" : "5.12.1 Product & Service"},
+						{"name" : "5.12.2 Process Engineering"},
+						{"name" : "5.12.3 Policy Management"},
+						{"name" : "5.12.4 Demand Planning"},
+						{"name" : "5.12.5 Supplier Planning"}
+					]
+				},
+				{"name":"5.13 Operational Collaboration",
+					"children" :[
+						{"name" : "5.13.1 Resource Optimization"},
+						{"name" : "5.13.2 Sourcing Strategy"}
+					]
+				}
+			]
+		}
+	]
 }
