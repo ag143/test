@@ -6,10 +6,10 @@
 					"children": [
 						{"name" : "1.1.1 Generate Ideas & Concepts"
 						},
-						{"name" : "1.1.2 Complete Market and Customer Research"},
-						{"name" : "1.1.3 Develop Actuarial Assumptions"},
-						{"name" : "1.1.4 Examine Legal Implications"},
-						{"name" : "1.1.5 Determine Investment Options"},
+						{"name" : "1.1.2 Complete Market and Customer Research","url": "https://datawrapper.de/"},
+						{"name" : "1.1.3 Develop Actuarial Assumptions","url": "https://datawrapper.de/"},
+						{"name" : "1.1.4 Examine Legal Implications","url": "https://datawrapper.de/"},
+						{"name" : "1.1.5 Determine Investment Options","url": "https://datawrapper.de/"},
 						{"name" : "1.1.6 Test Product Compliance"},
 						{"name" : "1.1.7 Establish Underwriting Standards"},
 						{"name" : "1.1.8 Define Service Strategies"},
