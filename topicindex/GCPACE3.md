@@ -1,4 +1,5 @@
 # GCP Overview
+## References: https://tutorialsdojo.com/google-cloud-platform-gcp-cheat-sheets/
 ## Google Cloud Global Infrastructure
 Google Cloud Global Infrastructure Cheat Sheet
 The cloud infrastructure of GCP is built around:
