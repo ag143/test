@@ -2,40 +2,40 @@
 # GCP Overview
 ## References: https://tutorialsdojo.com/google-cloud-platform-gcp-cheat-sheets/
 ## Google Cloud Global Infrastructure
-Google Cloud Global Infrastructure Cheat Sheet
+### Google Cloud Global Infrastructure Cheat Sheet
 The cloud infrastructure of GCP is built around:
 
-20+ regions
-70+ zones
-140+ network edge locations
+* 20+ regions
+* 70+ zones
+* 140+ network edge locations
 
 ![GCP](GCP_overview/google_cloud_infrastructure.png)
 
 
-Multi-regions
-A large geographic area, such as the United States, that contains two or more geographic places.
-Tutorials dojo strip
-Regions
-Are collections of zones that provide high-bandwidth, low-latency network connections to other zones in the same region.
+### Multi-regions
+* A large geographic area, such as the United States, that contains two or more geographic places.
+
+### Regions
+* Are collections of zones that provide high-bandwidth, low-latency network connections to other zones in the same region.
+
 ![GCP](GCP_overview/regions-and-zones.png)
+* Regional resources can be used by any resource in that region, regardless of zone.
+* Generally, communication within regions will always be cost-efficient and faster than communication across different regions.
 
-Regional resources can be used by any resource in that region, regardless of zone.
-
-Generally, communication within regions will always be cost-efficient and faster than communication across different regions.
-
-Zones
-It is an isolated location within a region and is composed of several physical infrastructures housed in a data center called cluster.
-Resources that live in a zone such as virtual machines or persistent disks are referred to as zonal resources.
-Zonal resources can only be used by other resources in the same zone.
-The fully-qualified name for a zone is made up of <region>-<zone>.
-For example, for zone a in region us-central1, the zone name would be us-central1-a.
-Depending on how widely you want to distribute your application resources, you can provision them across multiple zones in multiple regions for redundancy.
-Cluster
-It is a distinct physical infrastructure that is housed in a data center.
-Network edge locations
-Offers connection to Google Cloud services from different locations across metropolitan areas.
+### Zones
+* It is an isolated location within a region and is composed of several physical infrastructures housed in a data center called cluster.
+* Resources that live in a zone such as virtual machines or persistent disks are referred to as zonal resources.
+* Zonal resources can only be used by other resources in the same zone.
+* The fully-qualified name for a zone is made up of <region>-<zone>.
+* For example, for zone a in region us-central1, the zone name would be us-central1-a.
+* Depending on how widely you want to distribute your application resources, you can provision them across multiple zones in multiple regions for redundancy.
+### Cluster
+* It is a distinct physical infrastructure that is housed in a data center.
+### Network edge locations
+* Offers connection to Google Cloud services from different locations across metropolitan areas.
 View the interactive Google Cloud Platform map here.
 ## Google Cloud Platform Overview
+<pre>
 Google Cloud Platform Cheat Sheet
 The Google Cloud Platform is the infrastructure that powers the Google products you are familiar with including Gmail, Search, and Google Photos.
 
@@ -52,21 +52,21 @@ Storage and database products help us store, retrieve, and query data in fully m
 Moreover, networking services like the Virtual Private Cloud, Cloud VPN, Cloud Router, and Cloud Interconnect helps us manage and scale our global network infrastructure seamlessly.
 
 Google also offers machine learning and artificial intelligence (AI) products. You can build and deploy your machine learning models to AI platforms or leverage on easy-to-use pre-trained machine learning APIs like Vision and Natural Language.
-
-Projects
+</pre>
+### Projects
 Any Google cloud resources that you allocate and provision must belong to a project. Think of projects as the organizing entity for the things you will build in GCP.
 
-Tutorials dojo strip
+
 A project is composed of settings, permissions, and other metadata that describe your applications. Resources within a single project can work together straightforward by communicating through an internal network, subject to region-and-zone rules. A project can’t access another project’s resources unless configured to do so using Shared VPC or VPC Network Peering.
 
 ![GCP](GCP_overview/GCP-Project-Info.jpg)
 
 Each Google Cloud project has the following information:
 
-Project Name – which you will provide
-Project ID – which you can provide or Google Cloud can provide for us
-Project Number – which Google Cloud provides
-A project ID is unique across Google Cloud. You can delete projects but the ID can never be used again.
+* Project Name – which you will provide
+* Project ID – which you can provide or Google Cloud can provide for us
+* Project Number – which Google Cloud provides
+* A project ID is unique across Google Cloud. You can delete projects but the ID can never be used again.
 
 A project serves as a namespace, which means that every resource within each project must have a unique name. Though you can generally reuse resource names if they are in separate projects, some resource names must be globally unique.
 
@@ -128,14 +128,14 @@ In case you close your Cloud Billing account, the Cloud Billing account informat
 Pricing Factors
 There are three basic pricing factors that influence your costs which are:
 
-Compute
-Storage
-Egress traffic
-Tutorials dojo strip
+* Compute
+* Storage
+* Egress traffic
+
 Pricing Innovations
 Here are some pricing innovations introduced by GCP.
 
-Sustained-use Discounts
+### Sustained-use Discounts
 Automatically get up to a 30% worth of discount on workloads that run for a significant portion of the billing month on Compute Engine and Cloud SQL.
 Preemptible instances
 Run instances at a lower price point than normal instances. Perfect for fault-tolerant applications that can withstand possible instance preemptions, which can help you save up to 79% on your costs significantly.
@@ -193,10 +193,10 @@ Provide a list of GCP services of your cloud solution. Use the GCP Pricing Calcu
 Show me the answer!
 # GCP Compute Services
 ## Cloud Run
-Google Cloud Run Cheat Sheet
+### Google Cloud Run Cheat Sheet
 Is a managed compute platform that enables you to run stateless HTTP containers that are invokable via web requests or Pub/Sub events.
 Tutorials dojo strip
-Features
+### Features
 Cloud Run is serverless which means it abstracts away all the infrastructure management and maintenance so you can focus more on building your application.
 In Cloud Run, your application must be run in containers that contain everything that your software needs to run including code, runtime, and system libraries.
 It automatically scales up or down from zero to N depending on traffic.
@@ -215,14 +215,14 @@ Images are found on other Google Cloud Projects provided your account has the IA
 Public container images from Container Registry and Artifact Registry
 Cloud Run for Anthos
 You can use container images stored from any container registry, like Dockerhub.
-Pricing
+### Pricing
 You can use the Google Cloud Platform Pricing Calculator to estimate the cost of using Cloud Run.
 Cloud Run (fully managed) charges you only for the resources you use, rounded up to the nearest 100 milliseconds.
 Cloud Run for Anthos on Google Cloud is an add-on for Google Kubernetes Engine. Workloads running in a cluster are included in Google Kubernetes Engine pricing.
 ## Google App Engine
-Google App Engine Cheat Sheet
+### Google App Engine Cheat Sheet
 A highly scalable fully managed serverless platform for developing and hosting web applications.
-Features
+### Features
 A fully managed environment to allow you to concentrate on deploying your application.
 Custom runtimes allow you to bring any library and framework to App Engine by supplying a Docker container.
 Application versioning is available to easily host different versions of your application and create development, test, staging, and production environments.
@@ -246,7 +246,7 @@ Automatic Scaling
 Creates instance based on request rate, response latencies, or other application metrics that you specify.
 Manual Scaling
 Allows you to manually specify the number of instances that continuously run regardless of the load level.
-Pricing
+### Pricing
 Pricing is different for apps in the standard environment and the flexible environment.
 
 App Engine Standard Environment
@@ -277,9 +277,9 @@ Create a new project named production using the Cloud Console. Set up a Deployme
 Deploy your application again using the gcloud tool and supply the project parameter named production to create the new project.
 Show me the answer!
 ## Google Cloud Functions
-Google Cloud Functions Cheat Sheet
+### Google Cloud Functions Cheat Sheet
 A pay-as-you-go function as a service (FaaS) to run your code with zero server management.
-Features
+### Features
 There is no need to provision, manage, or upgrade servers.
 Cloud Functions can be written using:
 Node.js
@@ -294,7 +294,7 @@ To act on events, you shall define a trigger. Binding a function to a trigger en
 Google Cloud Storage 
 Supported HTTP request types like: POST, PUT, GET, DELETE, and OPTIONS.
 Pub/Sub
-Pricing
+### Pricing
 Cloud Functions is priced according to:
 how long your function runs
 how many times it is invoked
@@ -376,7 +376,7 @@ Live Migration
 GCE offers live migration to keep your virtual machine instances running even when a host system event, such as a software or hardware update, occurs.
 Instead of requiring your VMs to be rebooted, GCE live migrates your running instances to another host in the same zone keeping infrastructure protected and reliable without interrupting any of your virtual machines.
 Google provides a notification that migration is imminent when a VM is scheduled to be live migrated.
-Pricing
+### Pricing
 Custom Machine Types
 Reservation
 You can create reservations for Virtual Machine instances in a specific zone.
@@ -419,9 +419,9 @@ Create a snapshot of your instance boot disk. Create a custom image from the sna
 Create a snapshot of your instance’s base VM. Use the snapshot to launch new instances.
 Show me the answer!
 ## Google Kubernetes Engine (GKE)
-Google Kubernetes Engine Cheat Sheet
+### Google Kubernetes Engine Cheat Sheet
 Secured and managed Kubernetes services with auto-scaling and multi-cluster support
-Features
+### Features
 Can be configured to automatically scale node pool and clusters across multiple node pools based on changing workload requirements.
 Auto-repair can be enabled to do health checks on node
 Choose clusters tailored to your requirements based on:
@@ -475,7 +475,7 @@ GKE Sandbox uses gVisor.
 You cannot enable GKE Sandbox on a default node pool.
 When using Sandbox, you must have at least 2 node pools.
 It is not possible to use accelerators such as GPUs or TPUs
-Pricing
+### Pricing
 Pricing for Cluster Management
 One zonal cluster (single-zone or multi-zonal) per billing account is free.
 The fee is flat, irrespective of cluster size and topology—whether it is a single-zone cluster, multi-zonal cluster or regional cluster, all accrue the same flat fee per cluster.
@@ -533,10 +533,10 @@ The option that says: Create a Google Kubernetes Engine Cluster and enable the n
 The option that says: Create a Google Kubernetes Engine Cluster. Enable autoscaling to automatically create and delete nodes is incorrect. Even though this approach can save costs by automatically deleting unused nodes, using preemptible VMs still provides a bigger cost reduction. 
 # GCP Storage Services
 ## Google Cloud Filestore
-Google Cloud Filestore Cheat Sheet
+### Google Cloud Filestore Cheat Sheet
 Fully managed NFS file servers on Google Cloud for Compute Engine and Google Kubernetes Engine instances
 Most commonly used for media rendering, data analytics, and managing shared content.
-Features
+### Features
 Simple, fast, consistent, scalable, and easy to use network-attached storage.
 You can copy data from Cloud Storage to a filestore fileshare that is mounted on a Compute Engine instance.
 Data is encrypted at rest and in transit with system-defined keys or customer-supplied keys.
@@ -614,7 +614,7 @@ Multipart Upload – utilize this if the file is small enough to upload again if
 Resumable Upload – utilize this for a more reliable transfer, which is especially important with large files. 
 Parallel composite uploads – utilize if network and disk speed are not limiting factors. When doing parallel composite upload, a file is divided into up to 32 chunks and uploaded in parallel to temporary objects. The final object is recreated using the temporary objects, and the temporary objects are deleted.
 Alternatively, for uploading large volumes of data (from hundreds of terabytes up to 1 petabyte), you can utilize the Transfer Appliance. It is a hardware appliance you can use to securely migrate to Google Cloud Platform without disrupting business operations.
-Pricing
+### Pricing
 Pricing for Cloud Storage services is based on what you use, including:
 the amount of data you store,
 the duration for which you store it,
@@ -645,9 +645,9 @@ Verify if the VM instance and the bucket have the same region.
 Set the Cloud Storage bucket to public and configure the objects to have a randomized suffix in its object name.
 Show me the answer!
 ## Local SSD
-Local SSD Cheat Sheet
+### Local SSD Cheat Sheet
 Is a local solid-state drive storage physically attached to the server that hosts your virtual machine (VM) instances.
-Features
+### Features
 Tightly coupled to a physical server that offers superior performance, very high input/output operations per second (IOPS), and very low latency compared to other block storage options.
 Each local SSD is 375 GB. Moreover, you can attach a maximum of 24 Local SSD partitions. You can also format and mount several local SSD partitions into one logical volume.
 Local SSDs are designed for temporary storage use cases which makes them suitable for workloads like:
@@ -660,10 +660,10 @@ Date stored in the GCP infrastructure is automatically encrypted at rest includi
 The performance boosts you get from Local SSDs require certain trade-offs like availability, durability, and flexibility. Because of these, the storage is not automatically replicated and all data on the local SSD may be lost if the instance stops for any reason.
 You are not able to stop and restart an instance that has a local SSD. This means that if you shut down an instance with a local SSD through the guest OS, you cannot restart the instance and all the data stored on the local SSD will be lost.
 ## Persistent Disks
-Persistent Disks Cheat Sheet
+### Persistent Disks Cheat Sheet
 Are durable network storage devices that you can provision to host your virtual machine instances.
 Tutorials dojo strip
-Features
+### Features
 Data on each persistent disk is distributed across several physical disks and is designed for high durability. It stores data redundantly to ensure data integrity.
 Persistent disks are resizable to accommodate larger storage requirements.
 It can be attached to virtual machines running on Compute Engine (GCE) or Google Kubernetes Engine (GKE).
@@ -692,7 +692,7 @@ Snapshots
 Persistent disk snapshots can be created to protect against data loss.
 Snapshots are incremental and take only minutes to create even if you snapshot disks that are attached to running instances.
 You can set up a snapshot schedule to back up your data on a regular basis.
-Pricing
+### Pricing
 Provisioning persistent disks incurs cost based on the following factors:
 Amount and location of provisioned space per disk
 Snapshot Storage
@@ -770,9 +770,9 @@ Event-driven transfer on Storage Transfer Service for Google Cloud Storage
 Once all of these are configured, you will just wait for Pub/Sub subscription to get an event from the source bucket. After this, the transfer job will be triggered, and the replication will start between the source and the destination. The transfer details are available from the job details page on STS.
 # GCP Database Services
 ## Google BigQuery
-Google BigQuery Cheat Sheet 
+### Google BigQuery Cheat Sheet 
 A fully managed data warehouse where you can feed petabyte-scale data sets and run SQL-like queries.
-Features
+### Features
 Cloud BigQuery is a serverless data warehousing technology.
 It provides integration with the Apache big data ecosystem allowing Hadoop/Spark and Beam workloads to read or write data directly from BigQuery using Storage API.
 BigQuery supports a standard SQL dialect that is ANSI:2011 compliant, which reduces the need for code rewrites.
@@ -823,27 +823,27 @@ Load the data in BigTable. Give the analysts the necessary IAM roles to run SQL 
 Import the data to Memorystore to provide quick access to Parquet data in the Cloud Storage bucket.
 Show me the answer!
 ## Google Cloud Bigtable
-Google Cloud Bigtable Cheat Sheet
+### Google Cloud Bigtable Cheat Sheet
 A fully managed NoSQL database service designed for large analytical and operational workloads and enables you to store terabytes or even petabytes of data.
-Features
+### Features
 You can use Cloud BigTable to store and query time-series data.
 It is ideal for storing large amounts of single-keyed data.
 Scales seamlessly from thousands to millions of reads/writes per second.
 Tutorials dojo strip
 Resize your cluster nodes to adjust Cloud Bigtable throughput without restarting – all without downtime.
-Pricing
+### Pricing
 When you use Cloud Bigtable, you are charged for the following:
 Type of Cloud Bigtable instance
 Total number of nodes in your instance’s clusters
 Amount of storage that your tables use
 Amount of network bandwidth that you use
 ## Google Cloud SQL
-Google Cloud SQL Cheat Sheet
+### Google Cloud SQL Cheat Sheet
 A fully managed relational database service. Cloud SQL is available for:
 MySQL
 PostgreSQL
 SQL Server
-Features
+### Features
 Scale instantly with a single API call as your data grows.
 Automated and on-demand backups are available.
 You can restore your database instance to its state at an earlier point in time by enabling binary logging.
@@ -856,7 +856,7 @@ Security
 Data is encrypted at rest and in transit and can be encrypted using customer-managed encryption keys.
 It supports private connectivity with Virtual Private Cloud.
 Every Cloud SQL instance includes a network firewall to allow you to publicly control network access to your database instances.
-Pricing
+### Pricing
 Price varies depending on how much storage, memory, and CPU you provision.
 Cloud SQL offers per-second billing and database instances.
 Committed use discounts are offered for continuous use of database instances in a particular region for a one-year or three-year term.
@@ -871,9 +871,9 @@ Choose Cloud SQL (MySQL) and select the create failover replicas option.
 Choose Cloud Spanner and configure your instance with 2 nodes.
 Choose Cloud Spanner and set up your instance as multi-regional.
 ## Google Cloud Spanner
-Google Cloud Spanner Cheat Sheet
+### Google Cloud Spanner Cheat Sheet
 A fully managed relational database service that scales horizontally with strong consistency.
-Features
+### Features
 SLA availability up to 99.999% for multi-regional instances with 10x less downtime than four nines.
 Provides transparent, synchronous replication across region and multi-region configurations.
 Optimizes performance by automatically sharding the data based on request load and size of data so you can spend less time thinking about scaling your database and more time scaling your business.
@@ -881,7 +881,7 @@ You can run instances on a regional scope or multi-regional where your database 
 All tables must have a declared primary key (PK), which can be composed of multiple table columns.
 Can make schema changes like adding a column or adding an index while serving live traffic with zero downtime.
 Tutorials dojo strip
-Pricing
+### Pricing
 Pricing for Cloud Spanner is simple and predictable. You are only charged for:
 number of nodes in your instance
 amount of storage that your tables and secondary indexes use (not pre-provisioned)
@@ -899,10 +899,10 @@ Set up an alerting policy on Cloud Monitoring that sends an alert to a webhook w
 Set up an alerting policy on Cloud Monitoring that sends an email alert to Google Cloud Support email when the Cloud Spanner CPU metric exceeds the desired threshold. The Google Support team shall scale the resources up or down appropriately.
 # GCP Networking & Content Delivery
 ## Google Cloud CDN
-Google Cloud CDN Cheat Sheet
+### Google Cloud CDN Cheat Sheet
 The Google Cloud CDN (content delivery network) service accelerates your web content delivery by using Google’s global edge network to bring content as close to the user as possible.
 It helps you reduce latency, cost, and load for your backend services.
-Features
+### Features
 Activates with a single click for Cloud Load Balancing users.
 Cloud CDN supports modern protocols originally developed at Google, like HTTP/2 and QUIC.
 Integrates with Cloud Monitoring and Cloud Logging by providing latency metrics and raw HTTP request logs for deeper and better visibility.
@@ -915,15 +915,15 @@ Serverless NEGs: One or more App Engine, Cloud Run, or Cloud Functions services
 Internet NEGs, for endpoints that are outside of Google Cloud (also known as custom origins)
 Buckets in Cloud Storage
 Cloud CDN also delivers content hosted on-premises or in another cloud over Google’s high-performance distributed edge caching infrastructure.
-Pricing
+### Pricing
 When Cloud CDN serves your content, you’re charged for:
 Bandwidth
 HTTP/HTTPS requests.
 You are also charged for cache invalidations you initiate.
 ## Google Cloud DNS
-Google Cloud DNS Cheat Sheet
+### Google Cloud DNS Cheat Sheet
 Cloud DNS is Google’s infrastructure for production quality and high-volume authoritative DNS serving.
-Features
+### Features
 Authoritative DNS Lookup
 Cloud DNS translates requests for domain names like www.google.com into IP addresses like 74.125.29.101.
 Manage your DNS records for your domain using Google Cloud Console.
@@ -934,7 +934,7 @@ Can perform DNS Forwarding for hybrid architecture.
 You can create Private DNS zones that provide an easy-to-manage internal DNS solution for your private Google Cloud networks to help you eliminate the need to provision and manage additional software and resources.
 Private DNS logs records on queries received from virtual machines and inbound forwarding flows within your networks.
 View DNS logs in Cloud Logging and export logs to any destination that Cloud Logging export supports.
-Pricing
+### Pricing
 With Cloud DNS, the charge is per zone per month (regardless of whether you use your zone), and you also pay for queries against your zones.
 The pricing applies both to all zone types: public, private, and forwarding.
 ## Google Cloud Hybrid Connectivity
@@ -974,9 +974,9 @@ Build a custom-mode VPC. Set up VPC Network Peering between your on-premises net
 Provision virtual machines on your on-premises and Google Cloud VPC networks that will serve as bastion hosts. Configure the VMs as proxy servers using public IP addresses.
 Set up Cloud VPN between your on-premises network to a VPC network through an IPsec VPN connection.
 ## Google Cloud Router
-Google Cloud Router Cheat Sheet
+### Google Cloud Router Cheat Sheet
 Cloud Router is a fully distributed and managed Google Cloud service that helps you define custom dynamic routes and scales with your network traffic.
-Features
+### Features
 It works with both legacy networks and Virtual Private Cloud (VPC) networks.
 Cloud Router utilizes Border Gateway Protocol (BGP) to exchange routes between your Virtual Private Cloud (VPC) network and your on-premises network.
 Using Cloud Router is required or recommended in the following cases:
@@ -1012,9 +1012,9 @@ a. Create a VPN tunnel to GCP using Cloud VPN or Cloud Interconnect.
 b. Use Cloud Router to create a custom route advertisement for 199.36.153.4/30. Announce that network to your on-premises network via VPN tunnel.
 c. Configure the DNS server in your on-premises network to resolve *.googleapis.com as a CNAME to restricted.googleapis.com.
 ## Google Cloud Load Balancing
-Google Cloud Load Balancing Cheat Sheet
+### Google Cloud Load Balancing Cheat Sheet
 Google Cloud Load Balancing allows you to put your resources behind a single IP address.
-Features
+### Features
 Can be set to be available externally or internally with your Virtual Private Network (VPC).
 HTTP(S) load balancing can balance HTTP and HTTPS traffic across multiple backend instances, across multiple regions. 
 Enable Cloud CDN for HTTP(S) load balancing to optimize application delivery for your users with a single checkbox.
@@ -1162,7 +1162,7 @@ Connecting VPC Networks
 An organization can use a Shared VPC to keep a VPC network in a common host project. Authorized IAM members from other projects in the same organization can create resources that use the Shared VPC network’s subnet.
 You can use VPC Network Peering to connect VPCs to other VPC networks located in different projects or organizations.
 VPC networks can be securely connected in hybrid environments by utilizing Cloud VPN or Cloud Interconnect.
-Pricing
+### Pricing
 No charge for egress through network IP addresses. There are charges though for egress traffic through external IP addresses, even if traffic is in the same zone.
 You are also charged for active and unused static and ephemeral IP addresses inside your VPC.
 Validate Your Knowledge
@@ -1447,7 +1447,7 @@ Autoscaling lets the Dataflow automatically choose the appropriate number of wor
 You can build a batch or streaming pipeline protected with customer-managed encryption key (CMEK) or access CMEK-protected data in sources and sinks.
 Dataflow is integrated with VPC Service Controls to provide additional security on data processing environments by improving the ability to mitigate the risk of data exfiltration.
 Tutorials dojo strip
-Pricing
+### Pricing
 Dataflow jobs are billed per second, based on the actual use of Dataflow batch or streaming workers. Additional resources, such as Cloud Storage or Pub/Sub, are each billed per that service’s pricing.
 Validate Your Knowledge
 Question 1
@@ -1472,7 +1472,7 @@ You can leverage hundreds of transformation functions readily available to turn 
 Cloud Dataprep enables users to collaborate on similar flow objects in real-time or to create copies for other team members to use for independent tasks.
 Explore your data through interactive visual distributions to assist in your discovery, cleansing, and transformation process.
 Cloud Dataprep automatically generates one or more samples of the data for display and manipulation in the client application to achieve performance optimization.
-Pricing
+### Pricing
 Pricing is split across two variables;
 Design – is priced on a per-project basis for an unlimited number of users.
 Execution – consists of the Dataflow usage for running jobs in Dataprep.
@@ -1499,7 +1499,7 @@ RESTful APIs
 SSH access.
 Dataproc can be provisioned with custom images according to your needs.
 Workflow templates provide a flexible and simple mechanism for managing and executing workflows.
-Pricing
+### Pricing
 Only pay for the resources you use and lower the total cost of ownership of OSS
 Dataproc pricing is based on the number of vCPUs and the duration that they run.
 ## Google Cloud Pub/Sub
@@ -1527,7 +1527,7 @@ Communication can be
 one-to-many
 many-to-one
 many-to-many
-Pricing
+### Pricing
 Pub/Sub pricing is calculated based upon monthly data volumes:
 Message ingestion and delivery
 Snapshots and retained acknowledged messages
@@ -1679,7 +1679,7 @@ Deployment Manager Type Viewer
 Provides read-only access to all Type Registry resources.
 Deployment Manager Viewer
 Provides read-only access to all Deployment Manager-related resources.
-Pricing
+### Pricing
 You only pay for the resources that you provision. Deployment Manager has no additional charge to Google Cloud Platform customers.
 ## Google Cloud Logging
 ### Google Cloud Logging Cheat Sheet
@@ -1718,7 +1718,7 @@ To export audit log entries outside of Logging:
 Create a logs sink.
 Give the sink a query that specifies the audit log types you want to export.
 If you want to export audit log entries for a Google Cloud organization, folder, or billing account, review Aggregated sinks.
-Pricing
+### Pricing
 All features of Cloud Logging are free to use, and the charge is only applicable for ingested log volume over the free allotment. Free usage allotments do not come with upfront fees or commitments.
 Validate Your Knowledge
 Question 1
@@ -1762,7 +1762,7 @@ Cloud Monitoring Agent
 The Cloud Monitoring agent is a collectd-based daemon that collects application and system metrics from virtual machine (VM) instances.
 The Monitoring agent collects disk, network, CPU, and process metrics by default.
 You can configure the Monitoring agent to monitor third-party applications.
-Pricing
+### Pricing
 Monitoring charges only for the volume of ingested metric data and Cloud Monitoring API read calls that exceed the free monthly allotment.
 Non-chargeable metrics and Cloud Monitoring API write calls don’t count towards the allotment limit.
 Validate Your Knowledge
