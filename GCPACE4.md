@@ -9,7 +9,7 @@ The cloud infrastructure of GCP is built around:
 * 70+ zones
 * 140+ network edge locations
 
-![GCP](imagesGCP_overview/google_cloud_infrastructure.png)
+![GCP](images/GCP_overview/google_cloud_infrastructure.png)
 
 
 ### Multi-regions
@@ -18,7 +18,7 @@ The cloud infrastructure of GCP is built around:
 ### Regions
 * Are collections of zones that provide high-bandwidth, low-latency network connections to other zones in the same region.
 
-![GCP](imagesGCP_overview/regions-and-zones.png)
+![GCP](images/GCP_overview/regions-and-zones.png)
 * Regional resources can be used by any resource in that region, regardless of zone.
 * Generally, communication within regions will always be cost-efficient and faster than communication across different regions.
 
@@ -59,7 +59,7 @@ Any Google cloud resources that you allocate and provision must belong to a proj
 
 A project is composed of settings, permissions, and other metadata that describe your applications. Resources within a single project can work together straightforward by communicating through an internal network, subject to region-and-zone rules. A project can’t access another project’s resources unless configured to do so using Shared VPC or VPC Network Peering.
 
-![GCP](imagesGCP_overview/GCP-Project-Info.jpg)
+![GCP](images/GCP_overview/GCP-Project-Info.jpg)
 
 Each Google Cloud project has the following information:
 
@@ -75,7 +75,7 @@ There are three different ways to interact with GCP services.
 
 1. Cloud Console
 
-![GCP](imagesGCP_overview/Google-Cloud-Console-1.jpg)
+![GCP](images/GCP_overview/Google-Cloud-Console-1.jpg)
 
 
 The Google Cloud console provides a web-based graphical user interface that you can use to manage your Google Cloud projects. In using the Cloud Console, you start by creating a new project or by choosing an existing project. From there, you can configure the resources you created in the context of that project.
@@ -85,7 +85,7 @@ The two other ways to interact with Google Cloud services utilize the use of the
 To run gcloud commands, you can use the following: Cloud SDK and Cloud Shell.
 
 2. Cloud SDK
-![GCP](imagesGCP_overview/Google-Cloud-SDK-1.jpg)
+![GCP](images/GCP_overview/Google-Cloud-SDK-1.jpg)
 
 
 * You can install Cloud SDK on your machine. The SDK includes the gcloud tool so you can open a terminal window on your own computer and run commands to manage Google Cloud services.
@@ -95,7 +95,7 @@ To install Cloud SDK on your computer, visit the Cloud SDK installation instruct
 https://cloud.google.com/sdk/docs/downloads-versioned-archives
 
 3. Cloud Shell
-![GCP](imagesGCP_overview/Google-Cloud-Shell-1.jpg)
+![GCP](images/GCP_overview/Google-Cloud-Shell-1.jpg)
 
 *   The cloud shell is a browser-based shell that you can open via Google Console.
   Cloud Shell provides the following:
@@ -158,7 +158,7 @@ https://cloud.google.com/sdk/docs/downloads-versioned-archives
 *   Fixed Pricing – charged based on the length of time the solution is used, in increments of minutes.
 *   Resource-based pricing – charged based on the number of vCPUs, size of the system’s memory, number of GPUs, or a combination of these options.
 *   Pricing Calculator
-*   ![GCP](imagesGCP_overview/gcp-pricing-calculator.png)
+*   ![GCP](images/GCP_overview/gcp-pricing-calculator.png)
   You can estimate your cloud computing costs using the GCP Pricing Calculator.
   
 *   Validate Your Knowledge
@@ -191,7 +191,7 @@ https://cloud.google.com/sdk/docs/downloads-versioned-archives
 *   It is a regional service and is automatically replicated across multiple zones.
 *   Cloud Run for Anthos
 *   Cloud Run for Anthos abstracts complex Kubernetes concepts to allow developers to leverage the benefits of Kubernetes and serverless together. It provides access to custom machine types, additional networking support, and Cloud Accelerators.
-  ![GCP](imagesGCP_Compute_Services/Cloud-Run-vs-Cloud-Run-for-Anthos.png)
+  ![GCP](images/GCP_Compute_Services/Cloud-Run-vs-Cloud-Run-for-Anthos.png)
   What images you can deploy
 *   Cloud Run
 *   You can deploy container images stored in Container Registry or Artifact Registry. The following are the types of container images that can be deployed on Cloud Run:
@@ -517,7 +517,7 @@ https://cloud.google.com/sdk/docs/downloads-versioned-archives
 *   Google Cloud Storage Cheat Sheet
 *   An object storage service that stores data within buckets.
 *   Below is a sample Cloud Storage integration:
-  ![GCP](imagesGCP_Storage_Services/Google-Clous-Storage.png)
+  ![GCP](images/GCP_Storage_Services/Google-Clous-Storage.png)
   Buckets
 *   The data you upload on Cloud Storage are called objects.
 *   An object is an immutable piece of data consisting of a file in any format.
@@ -675,7 +675,7 @@ https://cloud.google.com/sdk/docs/downloads-versioned-archives
   roles/pubsub.subscriber
   pubsub.subscriptions.consume
   How to set up an event-driven transfer using STS?
-  ![GCP](imagesGCP_Storage_Services\Google-Cloud-New-Launch-Event-driven-transfer-for-Cloud-Storage-image1.png)
+  ![GCP](images/GCP_Storage_Services\Google-Cloud-New-Launch-Event-driven-transfer-for-Cloud-Storage-image1.png)
   Event-driven transfer on Storage Transfer Service for Google Cloud Storage
 *   An event should trigger an STS transfer job. Thus, a Pub/Sub subscription should be configured first. This Pub/Sub subscription will listen and get notifications whenever there are events from the Cloud Storage Bucket.
   Create Pub/Sub notification for the Cloud Storage you wish to monitor
@@ -685,7 +685,7 @@ https://cloud.google.com/sdk/docs/downloads-versioned-archives
 *    
 *   After the Pub/Sub subscription is created, you can now create the Transfer Job from the STS. Select event-driven as the transfer execution mode and enter the Pub/Sub subscription name you have made.
 *   Event-driven transfer on Storage Transfer Service for Google Cloud Storage
-  ![GCP](imagesGCP_Storage_Services/Google-Cloud-New-Launch-Event-driven-transfer-for-Cloud-Storage-image2.png)
+  ![GCP](images/GCP_Storage_Services/Google-Cloud-New-Launch-Event-driven-transfer-for-Cloud-Storage-image2.png)
   Once all of these are configured, you will just wait for Pub/Sub subscription to get an event from the source bucket. After this, the transfer job will be triggered, and the replication will start between the source and the destination. The transfer details are available from the job details page on STS.
 *   # GCP Database Services
 ## Google BigQuery
