@@ -1,27 +1,19 @@
-
 # GCP Overview
 ## References: https://tutorialsdojo.com/google-cloud-platform-gcp-cheat-sheets/
 ## Google Cloud Global Infrastructure
 ### Google Cloud Global Infrastructure Cheat Sheet
 The cloud infrastructure of GCP is built around:
-
 * 20+ regions
 * 70+ zones
 * 140+ network edge locations
-
 ![GCP](images/GCP_overview/google_cloud_infrastructure.png)
-
-
 ### Multi-regions
 * A large geographic area, such as the United States, that contains two or more geographic places.
-
 ### Regions
 * Are collections of zones that provide high-bandwidth, low-latency network connections to other zones in the same region.
-
 ![GCP](images/GCP_overview/regions-and-zones.png)
 * Regional resources can be used by any resource in that region, regardless of zone.
 * Generally, communication within regions will always be cost-efficient and faster than communication across different regions.
-
 ### Zones
 * It is an isolated location within a region and is composed of several physical infrastructures housed in a data center called cluster.
 * Resources that live in a zone such as virtual machines or persistent disks are referred to as zonal resources.
@@ -55,26 +47,17 @@ Google also offers machine learning and artificial intelligence (AI) products. Y
 </pre>
 ### Projects
 Any Google cloud resources that you allocate and provision must belong to a project. Think of projects as the organizing entity for the things you will build in GCP.
-
-
 A project is composed of settings, permissions, and other metadata that describe your applications. Resources within a single project can work together straightforward by communicating through an internal network, subject to region-and-zone rules. A project can’t access another project’s resources unless configured to do so using Shared VPC or VPC Network Peering.
-
 ![GCP](images/GCP_overview/GCP-Project-Info.jpg)
-
 Each Google Cloud project has the following information:
-
 * Project Name – which you will provide
 * Project ID – which you can provide or Google Cloud can provide for us
 * Project Number – which Google Cloud provides
 * A project ID is unique across Google Cloud. You can delete projects but the ID can never be used again.
-
 A project serves as a namespace, which means that every resource within each project must have a unique name. Though you can generally reuse resource names if they are in separate projects, some resource names must be globally unique.
-
 How do we interact with Google Cloud Platform services?
 There are three different ways to interact with GCP services.
-
 1. Cloud Console
-
 ![GCP](images/GCP_overview/Google-Cloud-Console-1.jpg)
 
 
