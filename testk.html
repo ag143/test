@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minimal GoJS Sample</title>
+  <!-- Copyright 1998-2021 by Northwoods Software Corporation. -->
+  <script src="https://unpkg.com/gojs"></script>
+  <script id="code">
+  function init() {
+    var $ = go.GraphObject.make;
+
+    myDiagram =
+      $(go.Diagram, "myDiagramDiv",
+        {
+          "undoManager.isEnabled": true
+        });
+
+    myDiagram.nodeTemplate =
+      $(go.Node, "Auto",
+        $(go.Shape,
+          { fill: "white" },
+          new go.Binding("fill", "color")),
+        $(go.TextBlock,
+          { margin: 8 },
+          new go.Binding("text", "key")),
+		  
+      );
+    
+    myDiagram.groupTemplate =
+      $(go.Group, "Auto",
+        $(go.Shape, { fill: "transparent", strokeWidth: 3 },
+          new go.Binding("stroke", "color"),
+          new go.Binding("fill", "color", go.Brush.lighten)),
+		  //new go.Binding("avoidable", "isSubGraphExpanded", e => !e).ofObject(),
+        $(go.Placeholder, { alignment: go.Spot.TopLeft, padding: 15 }),
+        $("SubGraphExpanderButton", { alignment: go.Spot.TopLeft }),
+        {
+          minSize: new go.Size(50, 50),
+          subGraphExpandedChanged: function(grp) {
+            if (!grp.isSubGraphExpanded) return;
+            shiftNodes(grp);
+          },
+          selectionChanged: function(grp) {
+            grp.diagram.commit(function(diag) {
+              var lay = grp.isSelected ? "Foreground" : "";
+              grp.layerName = lay;
+              grp.findSubGraphParts().each(function(x) { x.layerName = lay; });
+            }, null);
+          }
+        }
+      );
+
+  function shiftNodes(part) {
+    part.ensureBounds();
+    var b = part.actualBounds;
+    var diagram = part.diagram;
+    if (diagram === null) return;
+    var overlaps = diagram.findObjectsIn(b,
+          function(x) { var p = x.part; return (p.isTopLevel && p instanceof go.Node) ? p : null; },
+          function(node) { return node !== part && !node.isMemberOf(part); },
+          true);
+    var dx = 0;
+    var dy = 0;
+    var shiftsXY = new go.Set();
+    var shiftsX = new go.Set();
+    var shiftsY = new go.Set();
+    overlaps.each(function(node) {
+      var r = node.actualBounds;
+      if (r.contains(b.right, b.bottom)) {
+        dx = Math.max(dx, b.right - r.left);
+        dy = Math.max(dy, b.bottom - r.top);
+        shiftsXY.add(node);
+      } else if (b.contains(r.left, r.bottom)) {
+        dx = Math.max(dx, b.right - r.left);
+        shiftsX.add(node);
+      } else if (b.contains(r.right, r.top)) {
+        dy = Math.max(dy, b.bottom - r.top);
+        shiftsY.add(node);
+      }
+    });
+    if (dx > 0) diagram.moveParts(shiftsX, new go.Point(dx+10, 0), false);
+    if (dy > 0) diagram.moveParts(shiftsY, new go.Point(0, dy+10), false);
+    if (dx > 0 && dy > 0) diagram.moveParts(shiftsXY, new go.Point(dx+10, dy+10), false);
+  }
+  
+  let lastColor = 'red';
+    let colors = 0;
+    function linkStroke() {
+      lastColor = go.Brush.lightenBy(lastColor, 0.05);
+      colors++;
+      if (colors > 10) {
+        colors = 0;
+        lastColor = 'blue';
+      }
+      return lastColor; //go.Brush.randomColor();
+    }
+/*myDiagram.linkTemplate =
+  new go.Link({ routing: go.Routing.AvoidsNodes })  // link route should avoid nodes
+    .add(
+      new go.Shape(),
+      new go.Shape( { toArrow: "Standard" })
+    );
+myDiagram.linkTemplate = new go.Link({ routing: go.Routing.Orthogonal, corner: 10 })
+      .add(
+        new go.Shape({ strokeWidth: 2 }),
+        new go.Shape({ toArrow: 'OpenTriangle' })
+      );*/
+myDiagram.linkTemplate = new go.Link({ routing: go.Link.AvoidsNodes, corner: 10 })
+      //.bind('fromSpot')
+      //.bind('toSpot')
+	  .bind("fromEndSegmentLength")
+    .bind("toEndSegmentLength")
+      .add(
+        // use a binding to create a different color for each node
+        new go.Shape({ strokeWidth: 1 }).bind('stroke', '', linkStroke),
+        new go.Shape({ toArrow: 'Triangle', scale: 0.4 }),
+		
+      );
+
+ 
+
+  myDiagram.model = new go.GraphLinksModel(
+    [
+      { key: "A", header: "Supplier", color: "lightblue", isGroup: true },
+      { key: "B", color: "orange", isGroup: true ,text:"Group A"},
+      { key: "Kubernetes", color: "lightgreen",handler: 'Supplier', text: 'Planned Order Variations', footer: 'Retailer', isGroup: true },
+      { key: "D", color: "pink", isGroup: true },
+	  { key: "E", color: "pink", isGroup: true },
+      { key:"F",text:'skills', group: "A", isGroup:true },
+	  { key:"G",text:'skills', group: "B" },
+      { key:"H",text:'skills',group: "A" },
+      
+      { key:"I",text:'skills',group: "D" },
+      
+      { key:"J",text:'skills',group: "F" },
+     
+      
+      { key:"K",text:'skills',group: "E" },
+	  
+	  
+	 
+
+
+	 { key:"ClusterRole",header: 'Supplier', text: 'Planned Order Variations', footer: 'Retailer', role: 'b' ,group: "Kubernetes"},
+	  { key:"ConfigMap",text:'skills',group: "Kubernetes" },
+	  { key:"CustomResourceDefinition",text:'skills',group: "Kubernetes" },
+	  { key:"Deployment",text:'skills',group: "Kubernetes" },
+	  { key:"Ingress",text:'skills',group: "Kubernetes" },
+	  { key:"Job",text:'skills',group: "Kubernetes" },
+	  { key:"Namespace",text:'skills',group: "Kubernetes" },
+	  { key:"PersistentVolume",text:'skills',group: "Kubernetes" },
+	  { key:"Pod",text:'skills',group: "Kubernetes" },
+	  { key:"PriorityClass",text:'skills',group: "Kubernetes" },
+	  { key:"Role",text:'skills',group: "Kubernetes" },
+	  { key:"Secret",text:'skills',group: "Kubernetes" },
+	  { key:"ServiceAccount",text:'skills',group: "Kubernetes" },
+	  { key:"StroageClass",text:'skills',group: "Kubernetes" },
+	  { key:"Broken-Pod",text:'skills',group: "Kubernetes" },
+	  { key:"Cloud-Providers",text:'skills',group: "Kubernetes" },
+	  { key:"tests",text:'skills',group: "Kubernetes" },
+	  { key:"ClusterRoleBinding",text:'skills',group: "Kubernetes" },
+	  { key:"CronJob",text:'skills',group: "Kubernetes" },
+	  { key:"DaemonSet",text:'skills',group: "Kubernetes" },
+	  { key:"Endpoints",text:'skills',group: "Kubernetes" },
+	  { key:"Istio",text:'skills',group: "Kubernetes" },
+	  { key:"LimitRange",text:'skills',group: "Kubernetes" },
+	  { key:"NetworkPolicy",text:'skills',group: "Kubernetes" },
+	  { key:"PersistentVolumeClaim",text:'skills',group: "Kubernetes" },
+	  { key:"PodDisruptionBudget",text:'skills',group: "Kubernetes" },
+	  { key:"ResourceQuotas",text:'skills',group: "Kubernetes" },
+	  { key:"RoleBinding",text:'skills',group: "Kubernetes" },
+	  { key:"Service",text:'skills',group: "Kubernetes" },
+	  { key:"StatefulSet",text:'skills',group: "Kubernetes" },
+	  { key:"Broken-Deployment",text:'skills',group: "Kubernetes" },
+	  { key:"broken-secret",text:'skills',group: "Kubernetes" },
+	  { key:"plugins",text:'skills',group: "Kubernetes" },
+	  
+    ],
+    [
+	{ from: "I", to: "J", category: "Test" , text:"link"},
+	{ from: "I", to: "G", category: "Test" },
+	{ from: "A", to: "B", category: "Test" },
+	{ from: "A", to: "Kubernetes", category: "Test" },
+	{ from: "J", to: "K", category: "Test" },
+ 
+    ]);
+  }
+  </script>
+</head>
+<body onload="init()">
+  <div id="myDiagramDiv" style="border: solid 1px black; width:100%; height:600px"></div>
+</body>
+</html>
